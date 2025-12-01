@@ -1,0 +1,26 @@
+---
+// This is a simple container component that centers its content and provides padding
+---
+
+<div class="container">
+  <slot />
+</div>
+
+<style>
+  /* uses flex to center items on the page.*/
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .container > :global(*) {
+    /* sets the default width on anything inside this container*/
+    /* note: you can still override this on an individual basis by setting its max-width */
+    max-width: calc(
+      min(100%, var(--size-page-width)) - 2 * var(--size-page-padding)
+    );
+    width: 100%;
+  }
+</style>

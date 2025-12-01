@@ -1,0 +1,18 @@
+---
+const { text } = Astro.props;
+---
+
+<div class="sample-component">
+  <h2>This is the Sample Component</h2>
+  <p>{text}</p>
+</div>
+
+<style>
+  .sample-component {
+    border: 2px solid var(--color-accent);
+    padding: 1rem;
+    border-radius: 8px;
+    margin-top: 1rem;
+    max-width: 400px;
+  }
+</style>

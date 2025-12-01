@@ -1,0 +1,44 @@
+---
+// we can import fonts here, after installing them via Fontsource
+// see https://fontsource.org/docs/installation for instructions
+import "@fontsource/karla";
+---
+
+<style is:global>
+  /* We can use this style tag to set up colors, fonts, etc. */
+  :root {
+    --color-background: rgb(24, 0, 24);
+    --color-text: rgb(240, 240, 240);
+    --color-accent: rgb(0, 200, 255);
+    --color-focus-ring: rgb(255, 0, 255);
+
+    --font-body: "Karla", sans-serif;
+    --font-headings: "Karla", sans-serif;
+
+    font-size: 18px;
+
+    /* These sizes are used by the Container component to set up the page container */
+    --size-page-width: 800px;
+    --size-page-padding: 1rem;
+  }
+
+  /* We can also apply these colors as a default */
+  body {
+    background-color: var(--color-background);
+    color: var(--color-text);
+    font-family: var(--font-body);
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: var(--color-accent);
+  }
+
+  /* default focus ring styles */
+  *:focus-visible {
+    outline: 3px solid var(--color-focus-ring);
+  }
+</style>

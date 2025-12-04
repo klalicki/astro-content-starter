@@ -27,6 +27,7 @@ const projects = defineCollection({
         // if you want to use images in your front matter then use them in templates
         // (ie defining a thumbnail or hero image), you will need to define them here:
         thumbnail: z.optional(image()),
+      
       })
       // this next line allows you to use other properties without specifically defining them:
       .passthrough(),

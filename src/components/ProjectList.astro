@@ -10,10 +10,18 @@ const allProjects = await getCollection("projects");
       {/* conditional rendering:
       "if project.data.thumbnail exists, then create this <Image> element"
       */}
-      {project.data.thumbnail && (
+      {/* {project.data.thumbnail && (
         <Image class="project-img" src={project.data.thumbnail} alt="" />
+      )} */}
+      {/* "ternary conditional": if the first part (before the ?) exists, then show what's after the ?, otherwise show what's after the : */}
+
+      {project.data.thumbnail ? (
+        <Image class="project-img" src={project.data.thumbnail} alt="" />
+      ) : (
+        <div class="no-img">NO IMAGE</div>
       )}
-      <h2>{project.data.title}</h2>
+      {project.data.title && <h2>{project.data.title}</h2>}
+
       <p>{project.data.projectType}</p>
     </a>
   ))
@@ -22,5 +30,10 @@ const allProjects = await getCollection("projects");
 <style>
   .project-img {
     max-width: 300px;
+  }
+  .no-img {
+    max-width: 300px;
+    aspect-ratio: 3 / 2;
+    background-color: lightgray;
   }
 </style>

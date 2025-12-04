@@ -1,5 +1,4 @@
 ---
-title: Project 3
 projectType: Print Design
 thumbnail: horse.jpg
 ---
